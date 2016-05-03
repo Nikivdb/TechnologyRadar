@@ -1,0 +1,2 @@
+insert into Persons (PersonID, LastName, FirstName, Address, City) values (1, 'Downey Jr', 'Robert', 'Some address 1', 'Manhattan');
+insert into Persons (PersonID, LastName, FirstName, Address, City) values (2, 'Depp', 'Johnny', 'Some address 2', 'Owensboro');
