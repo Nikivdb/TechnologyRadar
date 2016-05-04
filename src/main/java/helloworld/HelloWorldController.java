@@ -1,5 +1,6 @@
 package helloworld;
 
+import infrastructure.Person;
 import infrastructure.PersonRepository;
 import org.hibernate.service.spi.InjectService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 @RestController
 public class HelloWorldController {
@@ -28,6 +31,11 @@ public class HelloWorldController {
     @RequestMapping(path = "/lastNames/", produces = MediaType.APPLICATION_JSON_VALUE)
     public String lastNames() {
         return String.join(", ", personRepository.findAllLastNames());
+    }
+
+    @RequestMapping(path = "/persons/", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Person> persons() {
+        return personRepository.findAllPersons();
     }
 
 }
