@@ -18,12 +18,12 @@ public class HelloWorldController {
     @Autowired
     private PersonRepository personRepository;
 
-    @RequestMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+    @RequestMapping(path = "/hello/", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
     public String index() {
         return "Hello World!";
     }
 
-    @RequestMapping(path = "/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(path = "/hello/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
     public String index(@PathVariable String name) {
         return "Hello " + name + "!";
     }
