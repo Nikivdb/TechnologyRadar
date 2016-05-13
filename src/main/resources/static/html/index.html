@@ -3,12 +3,36 @@
     <head>
         <title>Technology Radar</title>
 
+        <script src="webjars/chartjs/1.0.2/Chart.js"></script>
         <script src="webjars/angularjs/1.5.5/angular.js"></script>
+        <script src="webjars/angular-chart.js/0.8.8/angular-chart.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/lineChartController.js"></script>
+        <script src="js/polarChartController.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="webjars/angular-chart.js/0.8.8/angular-chart.css">
     </head>
-    <body>
-        <div ng-app="">
+    <body ng-app="technologyRadarApp">
+        <div>
             <p>Name : <input type="text" ng-model="name"></p>
             <h1>Hello {{name}}</h1>
         </div>
+
+        <div ng-controller="lineChartController" style="heigth: 150px; width: 250px;">
+            <canvas id="line" class="chart chart-line" chart-data="data"
+                    chart-labels="labels" chart-legend="true" chart-series="series"
+                    chart-click="onClick" style="heigth: 150px; width: 250px;" height="150" width="250">
+            </canvas>
+        </div>
+
+        <div ng-controller="polarChartController" style="heigth: 150px; width: 250px;">
+            <canvas id="base" class="chart-base" chart-type="type"
+                    chart-data="data" chart-labels="labels" chart-legend="true">
+            </canvas>
+        </div>
+
+
     </body>
+
 </html>
