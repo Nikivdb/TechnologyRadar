@@ -10,9 +10,11 @@
         <script src="js/app.js"></script>
         <script src="js/lineChartController.js"></script>
         <script src="js/polarChartController.js"></script>
+        <script src="js/requestController.js"></script>
 
         <link rel="stylesheet" type="text/css" href="webjars/angular-chart.js/0.8.8/angular-chart.css">
     </head>
+
     <body ng-app="technologyRadarApp">
         <div>
             <p>Name : <input type="text" ng-model="name"></p>
@@ -32,6 +34,7 @@
             </canvas>
         </div>
 
+        <div ng-include="'html/play.html'"></div>
 
     </body>
 

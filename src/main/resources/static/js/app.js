@@ -1,1 +1,4 @@
-angular.module("technologyRadarApp", ["chart.js"]);
+angular.module("technologyRadarApp.playApp", []);
+
+angular.module("technologyRadarApp", ["chart.js", "technologyRadarApp.playApp" ]);
+

@@ -1,0 +1,14 @@
+<div>
+    <div ng-controller="requestController">
+        <button name="requestButton" ng-click="makeRequest()">
+            <span>Make request</span>
+        </button>
+
+        <div ng-repeat="person in persons" >
+            <span>lastName: {{person.lastName}}</span><br>
+            <span>firstName: {{person.firstName}}</span><br>
+            <span>address: {{person.address}}</span><br>
+            <span>city: {{person.city}}</span><br>
+        </div>
+    </div>
+</div>
